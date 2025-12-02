@@ -2,6 +2,13 @@ const SQUARE_COUNT = 30;
 const SPEED = 10;
 const TIMER_SPEED = 200;
 
+function getColor() {
+    let r = parseInt(Math.random() * 256);
+    let g = parseInt(Math.random() * 256);
+    let b = parseInt(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     let squareElement = document.getElementById("square");
     //let squareElement = document.querySelector("#square");
