@@ -40,6 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
             let currentTop = parseInt(element.style.top) || 175;
 
             if (currentLeft >= 450 || currentLeft <= 0) {
+
+                //change the border and background as hits wall feature
+                   dx *= -1;
+                square.style.borderColor = getColor();
+                square.style.backgroundColor = getColor();
+            }
+
+            if (currentTop >= 350 || currentTop <= 0) {
+                dy *= -1;
+                square.style.borderColor = getColor();
+                square.style.backgroundColor = getColor();
+            }
+
                 dx *= -1;
                 element.style.borderColor = getRandomColor();
             }
