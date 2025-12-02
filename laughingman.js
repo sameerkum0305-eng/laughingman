@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (let i = 0; i < SQUARE_COUNT; i++) {
         //create the square
-        let square = document.createElement('img');
-        square.src = 'laughing_man.jpg';
-        square.alt = 'Catch the Laughing Man!';
-        square.className = 'square';
-        box.appendChild(square);
+          for (let i = 0; i < SQUARE_COUNT; i++) {
+        let img = document.createElement("img");
+        img.className = "square";
+        img.src = "laughing_man.jpg";
+        box.appendChild(img);
+    }
         //add it to the screen
     }
 
