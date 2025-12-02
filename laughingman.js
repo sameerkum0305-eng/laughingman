@@ -75,3 +75,16 @@ function getRandomColor() {
     let color = `rgb(${r},${g},${b})`;
     return color;
 }
+
+ box.addEventListener("mouseout", function(event) {
+        let t = event.target;
+//reset square background
+        if (t.id === "square") {
+            t.style.backgroundColor = "red";
+        } 
+
+            //change image back to laughing man
+        else if (t.tagName === "IMG") {
+            t.src = "laughing_man.jpg";
+        }
+    });
