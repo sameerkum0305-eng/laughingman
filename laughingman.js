@@ -55,6 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+ box.addEventListener("mouseover", function(event) {
+        let t = event.target;
+
+     //square changing background, not image
+        if (t.id === "square") {
+            t.style.backgroundColor = getColor();
+        } 
+      //change to orochimaru.jpg
+        else if (t.tagName === "IMG") {
+            t.src = "Orochimaru.jpg";
+        }
+    });
+
 function getRandomColor() {
     let r = parseInt(Math.random() * 256);
     let g = parseInt(Math.random() * 256);
